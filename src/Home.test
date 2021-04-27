@@ -1,0 +1,8 @@
+import {render,screen} from '@testing-library/react';
+import Home from './Home';
+
+test("Header renders with correct text",()=>{
+    render(<Home />);
+    const headerElement = screen.getByText(/Our Story/i);
+    expect(headerElement).toBeInTheDocument();
+});
